@@ -1,9 +1,9 @@
 add_executable(
-    CppTemplate 
+    aoc2022 
     main.cpp
 )
 
 target_link_libraries(
-    CppTemplate
+    aoc2022
     ${CONAN_LIBS}
 )

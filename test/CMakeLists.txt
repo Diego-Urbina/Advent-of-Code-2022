@@ -1,12 +1,12 @@
 add_executable(
-    CppTemplateTest
+    aoc2022_test
     main_test.cpp
 )
 
 target_link_libraries(
-    CppTemplateTest
+    aoc2022_test
     ${CONAN_LIBS}
 )
 
 include(GoogleTest)
-gtest_discover_tests(CppTemplateTest)
+gtest_discover_tests(aoc2022_test)
