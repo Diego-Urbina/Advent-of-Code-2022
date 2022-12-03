@@ -1,12 +1,20 @@
+project(aoc2022_test)
+
 add_executable(
-    aoc2022_test
+    ${PROJECT_NAME}
     main_test.cpp
+    ../src/Day01/Day01.cpp
+    ../src/Day02/Day02.cpp
 )
 
 target_link_libraries(
-    aoc2022_test
+    ${PROJECT_NAME}
     ${CONAN_LIBS}
 )
 
 include(GoogleTest)
-gtest_discover_tests(aoc2022_test)
+gtest_discover_tests(${PROJECT_NAME})
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E copy_directory
+                       ${CMAKE_CURRENT_SOURCE_DIR}/input $<TARGET_FILE_DIR:${PROJECT_NAME}>/input)

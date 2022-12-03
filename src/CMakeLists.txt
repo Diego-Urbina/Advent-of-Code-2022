@@ -1,9 +1,17 @@
+project(aoc2022)
+
 add_executable(
-    aoc2022 
+    ${PROJECT_NAME}
     main.cpp
+    Day01/Day01.cpp
+    Day02/Day02.cpp
 )
 
 target_link_libraries(
-    aoc2022
+    ${PROJECT_NAME}
     ${CONAN_LIBS}
 )
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+                   COMMAND ${CMAKE_COMMAND} -E copy_directory
+                       ${CMAKE_CURRENT_SOURCE_DIR}/input $<TARGET_FILE_DIR:${PROJECT_NAME}>/input)

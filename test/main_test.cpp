@@ -1,16 +1,38 @@
 #include <gtest/gtest.h>
 
-#define FMT_HEADER_ONLY
-#include <fmt/core.h>
+#include <filesystem>
+#include <string>
 
-TEST(TestExample, Test1)
+#include "../src/Day01/Day01.h"
+#include "../src/Day02/Day02.h"
+
+TEST(Day01, Puzzle1)
 {
-    auto s = fmt::format("{} * {} = {}", 6, 7, 6 * 7);
-    EXPECT_EQ(s, "6 * 7 = 42");
+    Day01 day01(".");
+    EXPECT_EQ(day01.Puzzle1(), 24000);
 }
 
-int main(int argc, char **argv)
+TEST(Day01, Puzzle2)
+{
+    Day01 day01(".");
+    EXPECT_EQ(day01.Puzzle2(), 45000);
+}
+
+TEST(Day02, Puzzle1)
+{
+    Day02 day02(".");
+    EXPECT_EQ(day02.Puzzle1(), 15);
+}
+
+TEST(Day02, Puzzle2)
+{
+    Day02 day02(".");
+    EXPECT_EQ(day02.Puzzle2(), 12);
+}
+
+int main(int argc, char *argv[])
 {
     ::testing::InitGoogleTest(&argc, argv);
+
     return RUN_ALL_TESTS();
 }
