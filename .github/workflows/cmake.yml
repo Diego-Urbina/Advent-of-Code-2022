@@ -1,6 +1,3 @@
-Conan has a Python virtual environment equivalent, or should I use a Docker, or ... ?)
-My workflow is the following:
-
 name: CMake
 
 on:
