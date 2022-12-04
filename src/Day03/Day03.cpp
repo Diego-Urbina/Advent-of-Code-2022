@@ -5,7 +5,7 @@
 
 Day03::Day03(std::string execFolder) : mInputFile{execFolder + "/input/Day03.txt"}
 {
-    print_title(3);
+    utils::format::print_title(3);
     ReadData();
 }
 
@@ -16,7 +16,7 @@ int Day03::Puzzle1()
     for (const auto &rucksack : mRucksacks) {
         answer += rucksack.get_value_repeat_object();
     }
-    print_answer(1, answer);
+    utils::format::print_answer(1, answer);
     return answer;
 }
 
@@ -33,7 +33,7 @@ int Day03::Puzzle2()
         answer += get_value(repeat_object);
     }
 
-    print_answer(2, answer);
+    utils::format::print_answer(2, answer);
     return answer;
 }
 

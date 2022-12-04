@@ -5,7 +5,7 @@
 
 Day01::Day01(std::string execFolder) : mInputFile{execFolder + "/input/Day01.txt"}
 {
-    print_title(1);
+    utils::format::print_title(1);
     ReadData();
 }
 
@@ -13,7 +13,7 @@ int Day01::Puzzle1()
 {
     int answer = mElfs.top()->mCalories;
 
-    print_answer(1, answer);
+    utils::format::print_answer(1, answer);
     return answer;
 }
 
@@ -25,7 +25,7 @@ int Day01::Puzzle2()
         mElfs.pop();
     }
 
-    print_answer(2, answer);
+    utils::format::print_answer(2, answer);
     return answer;
 }
 

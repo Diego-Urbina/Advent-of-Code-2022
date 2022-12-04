@@ -10,7 +10,7 @@ constexpr int WIN_GAME = 6;
 
 Day02::Day02(std::string execFolder) : mInputFile{execFolder + "/input/Day02.txt"}
 {
-    print_title(2);
+    utils::format::print_title(2);
     ReadData();
 }
 
@@ -32,7 +32,7 @@ int Day02::Puzzle1()
         answer += game_points[op][me];
     }
 
-    print_answer(1, answer);
+    utils::format::print_answer(1, answer);
     return answer;
 }
 
@@ -54,7 +54,7 @@ int Day02::Puzzle2()
         answer += game_points[op][me].second;
     }
 
-    print_answer(2, answer);
+    utils::format::print_answer(2, answer);
     return answer;
 }
 
