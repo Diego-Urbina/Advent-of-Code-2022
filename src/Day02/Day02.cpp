@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <unordered_map>
-#include "../utils/format_utils.h"
+#include "../utils/format.h"
 
 constexpr int LOST_GAME = 0;
 constexpr int DRAW_GAME = 3;

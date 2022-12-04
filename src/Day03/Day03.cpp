@@ -1,7 +1,7 @@
 #include "Day03.h"
 #include <iostream>
 #include <fstream>
-#include "../utils/format_utils.h"
+#include "../utils/format.h"
 
 Day03::Day03(std::string execFolder) : mInputFile{execFolder + "/input/Day03.txt"}
 {
