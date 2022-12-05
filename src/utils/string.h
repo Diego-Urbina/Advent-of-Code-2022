@@ -7,7 +7,7 @@ namespace utils
 {
 namespace string
 {
-static std::vector<std::string> split(const std::string &string, char delimiter)
+inline std::vector<std::string> split(const std::string &string, char delimiter)
 {
     std::vector<std::string> list;
 
