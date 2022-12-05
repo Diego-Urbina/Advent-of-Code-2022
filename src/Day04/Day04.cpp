@@ -3,6 +3,7 @@
 #include <fstream>
 #include <string>
 #include "../utils/format.h"
+#include "../utils/string.h"
 
 Day04::Day04(std::string execFolder) : mInputFile{execFolder + "/input/Day04.txt"}
 {
@@ -43,21 +44,11 @@ void Day04::ReadData()
     std::ifstream ifs(mInputFile, std::ios::binary);
 
     for (std::string line; std::getline(ifs, line);) {
-        int commaPos = line.find(',');
-        std::string firstSection = line.substr(0, commaPos);
-        std::string secondSection = line.substr(commaPos + 1, line.size() - 1 - commaPos);
+        std::vector<std::string> sections = utils::string::split(line, ',');
+        std::vector<std::string> section1 = utils::string::split(sections[0], '-');
+        std::vector<std::string> section2 = utils::string::split(sections[1], '-');
 
-        int dash1Pos = firstSection.find('-');
-        std::string firstSectionLow = firstSection.substr(0, dash1Pos);
-        std::string firstSectionHigh =
-          firstSection.substr(dash1Pos + 1, firstSection.size() - 1 - dash1Pos);
-
-        int dash2Pos = secondSection.find('-');
-        std::string secondSectionLow = secondSection.substr(0, dash2Pos);
-        std::string secondSectionHigh =
-          secondSection.substr(dash2Pos + 1, secondSection.size() - 1 - dash2Pos);
-
-        mSectionPairs.push_back({{std::stoi(firstSectionLow), std::stoi(firstSectionHigh)},
-                                 {std::stoi(secondSectionLow), std::stoi(secondSectionHigh)}});
+        mSectionPairs.push_back({{std::stoi(section1[0]), std::stoi(section1[1])},
+                                 {std::stoi(section2[0]), std::stoi(section2[1])}});
     }
 }
