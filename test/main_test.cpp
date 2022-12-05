@@ -1,12 +1,12 @@
 #include <gtest/gtest.h>
 
-#include <filesystem>
 #include <string>
 
 #include "../src/Day01/Day01.h"
 #include "../src/Day02/Day02.h"
 #include "../src/Day03/Day03.h"
 #include "../src/Day04/Day04.h"
+#include "../src/Day05/Day05.h"
 
 TEST(Day01, Puzzle1)
 {
@@ -54,6 +54,18 @@ TEST(Day04, Puzzle2)
 {
     Day04 day04(".");
     EXPECT_EQ(day04.Puzzle2(), 4);
+}
+
+TEST(Day05, Puzzle1)
+{
+    Day05 day05(".");
+    EXPECT_EQ(day05.Puzzle1(), "CMZ");
+}
+
+TEST(Day05, Puzzle2)
+{
+    Day05 day05(".");
+    EXPECT_EQ(day05.Puzzle2(), "MCD");
 }
 
 int main(int argc, char *argv[])
