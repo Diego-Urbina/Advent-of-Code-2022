@@ -14,7 +14,8 @@ inline void print_title(int day)
                "\nDAY {:02}\n", day);
 }
 
-inline void print_answer(int puzzle, long long answer)
+template<typename T>
+inline void print_answer(int puzzle, T answer)
 {
     fmt::print(fg(fmt::color::green), "Puzzle {}: {}\n", puzzle, answer);
 }
