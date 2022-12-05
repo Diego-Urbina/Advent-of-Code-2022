@@ -46,7 +46,7 @@ FixNamespaceComments: false
 IndentCaseLabels: false
 IndentWidth: 4
 Language: Cpp
-NamespaceIndentation: All
+NamespaceIndentation: None
 PointerAlignment: Right
 ReferenceAlignment: Right
 ReflowComments: true
