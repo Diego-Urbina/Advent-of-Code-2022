@@ -17,7 +17,7 @@ inline std::vector<std::string> split(const std::string &string, char delimiter)
         list.push_back(string.substr(last, next - last));
         last = next + 1;
     }
-    if (!string.empty()) {
+    if (last < string.size()) {
         list.push_back(string.substr(last));
     }
 
