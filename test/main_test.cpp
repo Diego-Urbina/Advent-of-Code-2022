@@ -7,6 +7,7 @@
 #include "../src/Day03/Day03.h"
 #include "../src/Day04/Day04.h"
 #include "../src/Day05/Day05.h"
+#include "../src/Day06/Day06.h"
 
 TEST(Day01, Puzzle1)
 {
@@ -66,6 +67,18 @@ TEST(Day05, Puzzle2)
 {
     Day05 day05(".");
     EXPECT_EQ(day05.Puzzle2(), "MCD");
+}
+
+TEST(Day06, Puzzle1)
+{
+    Day06 day06(".");
+    EXPECT_EQ(day06.Puzzle1(), 7);
+}
+
+TEST(Day06, Puzzle2)
+{
+    Day06 day06(".");
+    EXPECT_EQ(day06.Puzzle2(), 19);
 }
 
 int main(int argc, char *argv[])
