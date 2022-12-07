@@ -6,8 +6,6 @@
 struct Elf
 {
     int mCalories;
-
-    bool operator<(const Elf &other) { return this->mCalories < other.mCalories; }
 };
 
 struct Cmp
