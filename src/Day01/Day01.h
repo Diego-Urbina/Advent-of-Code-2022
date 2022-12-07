@@ -8,7 +8,7 @@ struct Elf
     int mCalories;
 };
 
-struct Cmp
+struct CmpElf
 {
     bool operator()(const std::unique_ptr<Elf> &left, const std::unique_ptr<Elf> &right) const
     {
@@ -27,5 +27,5 @@ private:
     void ReadData();
 
     std::string mInputFile;
-    std::priority_queue<std::unique_ptr<Elf>, std::vector<std::unique_ptr<Elf>>, Cmp> mElfs;
+    std::priority_queue<std::unique_ptr<Elf>, std::vector<std::unique_ptr<Elf>>, CmpElf> mElfs;
 };
