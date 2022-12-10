@@ -9,8 +9,9 @@ add_executable(
     ../src/Day04/Day04.cpp
     ../src/Day05/Day05.cpp
     ../src/Day06/Day06.cpp
-    ../src/Day08/Day08.cpp
     ../src/Day07/Day07.cpp
+    ../src/Day08/Day08.cpp
+    ../src/Day09/Day09.cpp
 )
 
 target_link_libraries(
