@@ -11,6 +11,8 @@
 #include "Day08/Day08.h"
 #include "Day09/Day09.h"
 #include "Day10/Day10.h"
+#include "Day11/Day11.h"
+#include "Day12/Day12.h"
 
 int main(int argc, char *argv[])
 {
@@ -55,6 +57,14 @@ int main(int argc, char *argv[])
     Day10 day10(execFolder);
     day10.Puzzle1();
     day10.Puzzle2();
+
+    Day11 day11(execFolder);
+    day11.Puzzle1();
+    day11.Puzzle2();
+
+    Day12 day12(execFolder);
+    day12.Puzzle1();
+    day12.Puzzle2();
 
     return 0;
 }
