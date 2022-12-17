@@ -16,6 +16,7 @@ add_executable(
     ../src/Day11/Day11.cpp
     ../src/Day12/Day12.cpp
     ../src/Day13/Day13.cpp
+    ../src/Day14/Day14.cpp
 )
 
 target_link_libraries(

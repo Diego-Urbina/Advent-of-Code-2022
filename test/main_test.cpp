@@ -15,6 +15,7 @@
 #include "../src/Day11/Day11.h"
 #include "../src/Day12/Day12.h"
 #include "../src/Day13/Day13.h"
+#include "../src/Day14/Day14.h"
 
 TEST(Day01, Puzzle1)
 {
@@ -164,6 +165,18 @@ TEST(Day13, Puzzle2)
 {
     Day13 day13(".");
     EXPECT_EQ(day13.Puzzle2(), 140);
+}
+
+TEST(Day14, Puzzle1)
+{
+    Day14 day14(".");
+    EXPECT_EQ(day14.Puzzle1(), 24);
+}
+
+TEST(Day14, Puzzle2)
+{
+    Day14 day14(".");
+    EXPECT_EQ(day14.Puzzle2(), 93);
 }
 
 int main(int argc, char *argv[])
