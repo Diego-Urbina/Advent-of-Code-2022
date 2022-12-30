@@ -2,14 +2,7 @@
 #include <string>
 #include <utility>
 #include <vector>
-
-struct Point
-{
-    int x{0};
-    int y{0};
-
-    bool operator<(const Point &b) const { return x < b.x || (x == b.x && y < b.y); }
-};
+#include "../utils/point2d.h"
 
 class Day09
 {
@@ -21,10 +14,10 @@ public:
 private:
     void ReadData();
 
-    void move_head(Point &head, const std::string &movement);
-    void move_next_to(const Point &p1, Point &p2);
+    void move_head(utils::Point2D &head, const std::string &movement);
+    void move_next_to(const utils::Point2D &p1, utils::Point2D &p2);
 
-    int move_rope(std::vector<Point> &rope);
+    int move_rope(std::vector<utils::Point2D> &rope);
 
     std::string mInputFile;
     std::vector<std::pair<std::string, int>> mMovs;

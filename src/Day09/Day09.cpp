@@ -17,8 +17,8 @@ Day09::Day09(std::string execFolder) : mInputFile{execFolder + "/input/Day09.txt
 
 int Day09::Puzzle1()
 {
-    std::vector<Point> rope;
-    rope.insert(rope.end(), 2, Point());
+    std::vector<utils::Point2D> rope;
+    rope.insert(rope.end(), 2, utils::Point2D());
 
     int answer = move_rope(rope);
     utils::format::print_answer(1, answer);
@@ -27,8 +27,8 @@ int Day09::Puzzle1()
 
 long long Day09::Puzzle2()
 {
-    std::vector<Point> rope;
-    rope.insert(rope.end(), 10, Point());
+    std::vector<utils::Point2D> rope;
+    rope.insert(rope.end(), 10, utils::Point2D());
 
     int answer = move_rope(rope);
     utils::format::print_answer(2, answer);
@@ -45,11 +45,11 @@ void Day09::ReadData()
     }
 }
 
-int Day09::move_rope(std::vector<Point> &rope)
+int Day09::move_rope(std::vector<utils::Point2D> &rope)
 {
-    Point &head = rope.front();
-    Point &tail = rope.back();
-    std::set<Point> tailVisitedPositions{tail};
+    utils::Point2D &head = rope.front();
+    utils::Point2D &tail = rope.back();
+    std::set<utils::Point2D> tailVisitedPositions{tail};
 
     auto move = [&](const auto &mov) {
         for (int i = 0; i < mov.second; i++) {
@@ -65,7 +65,7 @@ int Day09::move_rope(std::vector<Point> &rope)
     return tailVisitedPositions.size();
 }
 
-void Day09::move_head(Point &head, const std::string &movement)
+void Day09::move_head(utils::Point2D &head, const std::string &movement)
 {
     if (movement == "U") {
         head.y++;
@@ -81,7 +81,7 @@ void Day09::move_head(Point &head, const std::string &movement)
     }
 }
 
-void Day09::move_next_to(const Point &p1, Point &p2)
+void Day09::move_next_to(const utils::Point2D &p1, utils::Point2D &p2)
 {
     if (std::abs(p1.x - p2.x) >= 2) {
         // Move next to in x-axis
